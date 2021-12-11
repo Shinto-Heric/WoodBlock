@@ -416,7 +416,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 146, y: 144}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831610976
 MonoBehaviour:
@@ -434,9 +434,9 @@ MonoBehaviour:
   rows: 10
   square: {fileID: 6695457518900482573, guid: 79df186fba774e246ab74f93797a897d, type: 3}
   squareOffset: 1
-  squareScale: 1
+  squareScale: 0.92
   squareGap: 1
-  startPos: {x: -410, y: 530}
+  startPos: {x: -423, y: -350}
 --- !u!1 &2083318404
 GameObject:
   m_ObjectHideFlags: 0
