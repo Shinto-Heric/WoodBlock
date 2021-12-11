@@ -31,12 +31,13 @@ public class Grid : MonoBehaviour
 
     private void SpawnGrids()
     {
-        for(int row = 0; row < rows; row++)
+        for(var row = 0; row < rows; row++)
         {
-            for(int column = 0; column < columns; columns++)
+            for(var column = 0; column < columns; column++)
             {
                 gridSquares.Add(Instantiate(square));
                 gridSquares[gridSquares.Count - 1].transform.SetParent(this.transform);
+                gridSquares[gridSquares.Count - 1].transform.localScale =new Vector3(squareScale, squareScale, squareScale);
                 gridSquares[gridSquares.Count - 1].GetComponent<GridSquare>().SetImage();
             }
         }
@@ -63,7 +64,7 @@ public class Grid : MonoBehaviour
                 rowMoved = false;
             }
             var posXOffset = offset.x * columnNumber + (squareGapNum.x * squareGap);
-            var posYOffset = offset.y * columnNumber + (squareGapNum.y * squareGap);
+            var posYOffset = offset.y * rowNumber + (squareGapNum.y * squareGap);
 
             if(columnNumber > 0)
             {
@@ -78,7 +79,8 @@ public class Grid : MonoBehaviour
                 posYOffset += squareGap;
             }
             square.GetComponent<RectTransform>().anchoredPosition = new Vector2(startPos.x + posXOffset, startPos.y + posYOffset);
-            square.GetComponent<RectTransform>().localPosition = new Vector3(startPos.x + posXOffset, startPos.y + posYOffset);
+            square.GetComponent<RectTransform>().localPosition = new Vector3(startPos.x + posXOffset, startPos.y + posYOffset,0.0f);
+            columnNumber++;
         }
     }
 
