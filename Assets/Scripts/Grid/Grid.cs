@@ -14,7 +14,7 @@ public class Grid : MonoBehaviour
     public float squareScale = 0.5f;
     public float squareGap = 0.1f;
     public Vector2 startPos = new Vector2(0.0f, 0.0f);
-
+    public Gameover gameover;
 
     private Vector2 offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> gridSquares = new List<GameObject>();
@@ -221,7 +221,8 @@ public class Grid : MonoBehaviour
         }
         if(validShapes == 0)
         {
-            //GameEvents.GameOver(false);
+            //GameEvents.GameOver(100);
+            //gameover.GetComponent<Gameover>().TriggerGameover();
             Debug.Log("GameOver");
         }
     }

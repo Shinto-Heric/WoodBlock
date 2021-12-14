@@ -101,7 +101,7 @@ public class Block : MonoBehaviour, IPointerClickHandler,IPointerUpHandler,IBegi
     {
         currentBlockData = blockData;
         totalSqaureNumber = GetNOOFShapes(blockData);
-        while(currentBlock.Count <= totalSqaureNumber)
+        while(currentBlock.Count < totalSqaureNumber)
         {
             currentBlock.Add(Instantiate(blockSquareImage, transform) as GameObject);
         }
